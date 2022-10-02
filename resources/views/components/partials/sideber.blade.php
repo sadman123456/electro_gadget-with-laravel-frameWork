@@ -60,6 +60,19 @@
                             <p class=" text-light">Category Add</p>
                         </a>
                     </li>
+                    <li class="nav-item {{ Route::is('patient.index') ?  'active' : ''}}">
+                        <a href="{{ route('patient.index')}}">
+                            <i class="la la-table"></i>
+                            <p class=" text-light">Patient List</p>
+                        </a>
+                    </li>
+
+                    <li class="nav-item {{ Route::is('admin.addpatient') ?  'active' : ''}}">
+                        <a href="{{ route('admin.addpatient')}}">
+                            <i class="la la-table"></i>
+                            <p class=" text-light"> Add Patient</p>
+                        </a>
+                    </li>
                 
                     <li class="nav-item {{ Route::is('admin.addproduct') ?  'active' : ''}}">
                         <a href="{{ route('admin.addproduct')}}">

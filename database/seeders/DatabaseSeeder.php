@@ -6,6 +6,8 @@ namespace Database\Seeders;
 
 use App\Models\Product;
 use Database\Factories\ProductFactory;
+use Database\Factories\OrderFactory;
+
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
@@ -20,6 +22,8 @@ class DatabaseSeeder extends Seeder
     {
         $this->call([
             ProductSeeder::class,
+            CategorySeeder::class,
+            OderSeeder::class
          
         ]);
 

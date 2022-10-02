@@ -41,12 +41,12 @@
                                                           <th class="c_center" style="width:5%; padding: 25px;">SN</th>
                                                           <th class="c_center" style="width:5%; padding: 25px;">Name</th>
                                                           <th class="c_center" style="width:5%; padding: 25px;">Brand</th>
+                                                          <th class="c_center" style="width:5%; padding: 25px;">Category</th>                                                            
                                                           <th class="c_center" style="width:5%; padding: 25px;">Description</th>                                                            
                                                           <th class="c_center" style="width:5%; padding: 25px;">Sale Price</th>
                                                           <th class="c_center" style="width:5%; padding: 25px;">Purchase Price</th>
                                                           <th class="c_center" style="width:5%; padding: 25px;">Quantity</th>  
 
-                                                          <th class="c_center" style="width:5%; padding: 25px;">Available</th>  
                                                           <th class="c_center" style="width:5% ;padding: 25px;">View</th>
                                                           <th class="c_center" style="width:5% ;padding: 25px;">Edit</th>
                                                           <th class="c_center" style="width:5% ;padding: 25px;">Delete</th>
@@ -58,19 +58,21 @@
                                           
                 
                                                         <tbody id="">
-                                                    
+                                                        @foreach($products as $product)
+
                                                                                               
                                                           <tr role="row" class="odd" style="height: 75px; padding: 25px">
                                                            
-                                                              <td class="c_center " style="padding: 25px;" >02</td>
-                                                              <td class="c_center " style="padding: 25px;">Zawad</td>
-                                                              <td class="c_center "style="padding: 25px;">One Plus</td>
-                                                              <td class="c_center "style="padding: 25px;">Gorib er iphone</td>
-                                                              <td class="c_center "style="padding: 25px;">4k</td>
-                                                              <td class="c_center "style="padding: 25px;">30k</td>
-                                                              <td class="c_center "style="padding: 25px;">80</td>
+                                                              <td class="c_center " style="padding: 25px;" >{{ $product->id }}</td>
+                                                              <td class="c_center " style="padding: 25px;">{{ $product->name }}</td>
+                                                              <td class="c_center "style="padding: 25px;">{{ $product->model }}</td>
+                                                              <td class="c_center "style="padding: 25px;">{{ $product->category }}</td>
 
-                                                              <td class="c_center "style="padding: 25px;">Yes</td>
+                                                              <td class="c_center "style="padding: 25px;">{{ $product->description}}</td>
+                                                              <td class="c_center "style="padding: 25px;">{{ $product->sale_price}}</td>
+                                                              <td class="c_center "style="padding: 25px;">{{ $product->purchase_price}}</td>
+                                                              <td class="c_center "style="padding: 25px;">{{ $product->quantity}}</td>
+
                 
                                                               <td class="c_center "style="padding: 22px;">
                                                                 <a href="productview.html">  <button type="button" class="btn btn-success">View</button></a>
@@ -82,14 +84,13 @@
                   
                                                                   </td>
                 
-                                                                  <td class="c_center "style="padding: 22px;">
-                                                                    <button type="button" class="btn btn-danger">Delete</button>
-                    
-                                                                    </td>
+                                                                  <td>
+                                                                <a class="btn btn-sm btn-outline-danger" href="{{ route('product.destroy', $product->id) }}">Delete</a>
+                                                                 </td>
                                         
                                                           </tr>
                                                           
-                                                        
+                                                          @endforeach
                                                       </tbody>
                 
                 

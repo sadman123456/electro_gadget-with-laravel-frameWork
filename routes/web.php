@@ -5,12 +5,10 @@ use App\Http\Controllers\AddProductController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CategoryListController;
 use App\Http\Controllers\DashBoardController;
-use App\Http\Controllers\EditCategoryController;
 use App\Http\Controllers\EditProductController;
 use App\Http\Controllers\EditUserController;
 use App\Http\Controllers\PatientListController;
 use App\Http\Controllers\ProductListController;
-use App\Http\Controllers\ProductViewController;
 use App\Http\Controllers\RegistrationController;
 use App\Http\Controllers\UserListController;
 
@@ -47,9 +45,13 @@ Route::delete('/{id}/delete', [CategoryListController::class,'destroy' ])->name(
 
 Route::prefix('product')->group(function () {
 Route::get('/', [ProductListController::class,'index' ])->name('admin.productlist');
-Route::get('/add',[AddProductController::class,'addProduct' ])->name('admin.addproduct');
+Route::get('/add',[ProductListController::class,'create' ])->name('admin.addproduct');
+Route::post('/add',[ProductListController::class,'store'])->name('product.store');
+Route::get('/view/{id}',[ProductListController::class,'show' ])->name('admin.viewproduct');
+
+
+
 Route::get('/edit',[EditProductController::class,'editProduct' ])->name('admin.editproduct');
-Route::get('/view/{id}',[ProductViewController::class,'productView' ])->name('admin.viewproduct');
 Route::get('/{id}/delete', [ProductListController::class,'destroy' ])->name('product.destroy');
 
 
@@ -63,7 +65,7 @@ Route::get('/edit',[EditUserController::class,'editUser' ])->name('edit.user');
 
 Route::prefix('patience')->group(function () {
     Route::get('/',[PatientListController::class,'index' ])->name('patient.index');
-    Route::patch('/{id}/show',[PatientListController::class,'show' ])->name('patient.show');
+    Route::get('/{id}/show',[PatientListController::class,'show' ])->name('patient.show');
 
     Route::get('/add',[PatientListController::class,'create' ])->name('admin.addpatient');
     Route::post('/add',[PatientListController::class,'store' ])->name('patient.store');

@@ -17,7 +17,7 @@
                               </div>
                             <div class="col-md-6"></div>
                               <div class="col-md-2 col-sm-6" style="padding: 25px;">
-                                <a href="{{ url('/addproduct')}}"><button type="button" class="btn btn-primary">Add Products</button></a>
+                                <a href="{{ route('admin.addproduct')}}"><button type="button" class="btn btn-primary">Add Products</button></a>
                 
                               </div>
                             </div>
@@ -75,7 +75,7 @@
 
                 
                                                               <td class="c_center "style="padding: 22px;">
-                                                                <a href="productview.html">  <button type="button" class="btn btn-success">View</button></a>
+                                                              <a href="{{ route('admin.viewproduct', $product->id) }}">  <button type="button" class="btn btn-success">View</button></a>
                 
                                                                 </td>
                 

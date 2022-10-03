@@ -30,15 +30,16 @@
                                 <div class="col-md-6">
                                   <ul class="list-group">
                                    <center> <p class="list-group-item list-group-item-success"><b>PRODUCT DETAILS</b></p></center>
-                                   <li class="list-group-item"><b>Product ID </b><span class="badge"></span></li>
-                                   <li class="list-group-item"><b>Product Name</b> <span class="label label-info pull-right"></span></li>
-                                   <li class="list-group-item"><b>Brand</b> <span class="label label-primary pull-right"></span></li>
-                                   <li class="list-group-item"><b>Description: - </b><span></span></li>
+                                   <li class="list-group-item"><b>Product ID : {{ $products->id }}</b><span class="badge"></span></li>
+                                   <li class="list-group-item"><b>Product Name : {{ $products->name }}</b> <span class="label label-info pull-right"></span></li>
+                                   <li class="list-group-item"><b>Brand : {{ $products->model }}</b> <span class="label label-primary pull-right"></span></li>
+                                   <li class="list-group-item"><b>Category :{{ $products->category }} </b><span class="label label-info pull-right"></span></li>
 
-                                   <li class="list-group-item"><b>Purchase Price</b> <span class="label label-warning pull-right"></span></li>
-                                   <li class="list-group-item"><b>Sale Price </b><span class="label label-warning pull-right"></span></li>
-                                   <li class="list-group-item"><b>Quantity </b><span class="label label-success pull-right"></span></li>
-                                   <li class="list-group-item"><b>Available </b><span class="label label-info pull-right"></span></li>
+                                   <li class="list-group-item"><b>Description: -{{ $products->description}} </b><span></span></li>
+
+                                   <li class="list-group-item"><b>Purchase Price :{{ $products->purchase_price}}</b> <span class="label label-warning pull-right"></span></li>
+                                   <li class="list-group-item"><b>Sale Price :{{ $products->sale_price}} </b><span class="label label-warning pull-right"></span></li>
+                                   <li class="list-group-item"><b>Quantity :{{ $products->quantity}} </b><span class="label label-success pull-right"></span></li>
                                    
                                   </ul>
                                 </div>

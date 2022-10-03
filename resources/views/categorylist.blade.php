@@ -14,7 +14,7 @@
                                 </div>
                                 <div class="col-md-6"></div>
                                 <div class="col-md-2 col-sm-6" style="padding: 25px;">
-                                    <a href="{{route('admin.addcategory')}}"> <button type="button" class="btn btn-primary">Add
+                                    <a href="{{route('category.create')}}"> <button type="button" class="btn btn-primary">Add
                                             Category</button></a>
 
                                 </div>

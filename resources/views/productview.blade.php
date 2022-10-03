@@ -16,7 +16,7 @@
                               </div>
                             <div class="col-md-6"></div>
                               <div class="col-md-2 col-sm-6" style="padding: 25px;">
-                                <a href="productlist.html"> <button type="button" class="btn btn-primary">Back Product List</button></a>
+                                <a href="{{route('admin.productlist')}}"> <button type="button" class="btn btn-primary">Back Product List</button></a>
                 
                               </div>
                             </div>

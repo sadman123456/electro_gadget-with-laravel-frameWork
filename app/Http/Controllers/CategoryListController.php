@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\CategoryRequest;
 use App\Models\Category;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class CategoryListController extends Controller
 {
@@ -13,8 +15,10 @@ class CategoryListController extends Controller
     {
         return view ('addCategory');
     }
-    public function store(Request $request)
+    public function store(CategoryRequest $request)
     {
+
+
         $data=([
             'name'=> $request->name,
             'description'=>$request->description
@@ -41,7 +45,7 @@ class CategoryListController extends Controller
         return view ('editCategory', compact('categories'));
     }
 
-    public function update(Request $request, $id)
+    public function update(CategoryRequest $request, $id)
     {
         $categories = Category::find($id);
 

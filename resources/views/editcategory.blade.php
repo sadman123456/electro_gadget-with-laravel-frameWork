@@ -28,13 +28,31 @@
 
                                   <div class="col" style="padding: 15px; margin-left:25px;">                  
                                     <label>Category Name <span class="required_star">*</span></label>                 
-                                    <input type="text" name="name" value="{{$categories->name}}"class="form-control" placeholder="Category name">
+                                    <input 
+                                    type="text"
+                                    name="name" 
+                                    value="{{ old('name', $categories->name)}}"
+                                    class="form-control" 
+                                    placeholder="Category name">
+                                    @error('name')
+                                   <div class="from text text-danger">{{ $message }}</div>
+                                       @enderror
                                   </div>
                   
                                   <div class="col-md-6" style="padding: 15px; margin-left:25px;">
                                         <label>Description <span class="required_star">*</span></label>
-                                        <textarea class="form-control" name="description" value="{{ $categories->description }}" id="exampleFormControlTextarea1" cols="1" rows="1">{{ $categories->description }}</textarea>           
-                                    </div>
+                                        <textarea class="form-control" 
+                                        name="description" 
+                                        value="{{old('name',$categories->description )}}" 
+                                        id="exampleFormControlTextarea1" 
+                                        cols="1" 
+                                        rows="1">
+                                        {{ $categories->description }}
+                                      </textarea>           
+                                        @error('description')
+                                   <   div class="from text text-danger">{{ $message }}</>
+                                       @enderror 
+                                      </div>
 
                                 </div>
                   

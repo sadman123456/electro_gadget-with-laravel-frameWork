@@ -23,6 +23,9 @@ class ProductListController extends Controller
         }
     }
 
+    
+
+
     public function store(Request $request)
     {
         $data=([
@@ -72,5 +75,44 @@ class ProductListController extends Controller
               ->route('admin.productlist')
               ->withmMessage('Deleted Successfully!');
     }
+
+
+    public function edit($id)
+    
+    {
+        $categories= Category::all();
+        $products= Product::find($id);
+        return view ('editproduct', compact('products' ,'categories'));
+    }
+
+    public function update(Request $request, $id)
+    {
+        $products= Product::find($id);
+
+        $data=([
+            'name'=> $request->name,
+            'model'=>$request->brand,
+
+            'sale_price'=> $request->sale_price,
+            'purchase_price'=>$request->Purchase_price,
+
+            'description'=> $request->description,
+            'category'=>$request->category,
+            'quantity'=> $request->quantity,
+
+            'image'=> $request->image,
+           
+
+
+        ]);
+        
+        $products->update($data);
+
+        return redirect()
+              ->route('admin.productlist')
+              ->withMessage('Update Successfully!');
+    
+    }
+
 
 }

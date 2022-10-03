@@ -31,7 +31,7 @@ Route::get('/',[DashBoardController::class,'DashBoard' ])->name('admin.dashboard
 Route::prefix('category')->group(function () {
 
 Route::get('/', [CategoryListController::class,'index' ])->name('admin.categorylist');
-Route::get('/add',[CategoryListController::class,'create' ])->name('admin.addcategory');
+Route::get('/add',[CategoryListController::class,'create' ])->name('category.create');
 Route::post('/',[CategoryListController::class,'store' ])->name('category.store');
 
 
@@ -47,12 +47,14 @@ Route::prefix('product')->group(function () {
 Route::get('/', [ProductListController::class,'index' ])->name('admin.productlist');
 Route::get('/add',[ProductListController::class,'create' ])->name('admin.addproduct');
 Route::post('/add',[ProductListController::class,'store'])->name('product.store');
+
 Route::get('/view/{id}',[ProductListController::class,'show' ])->name('admin.viewproduct');
 
+Route::get('/{id}/edit',[ProductListController::class,'edit' ])->name('admin.editproduct');
+Route::patch('/{id}/edit',[ProductListController::class,'update' ])->name('product.update');
 
 
-Route::get('/edit',[EditProductController::class,'editProduct' ])->name('admin.editproduct');
-Route::get('/{id}/delete', [ProductListController::class,'destroy' ])->name('product.destroy');
+Route::delete('/{id}/delete', [ProductListController::class,'destroy' ])->name('product.destroy');
 
 
 });
@@ -62,6 +64,8 @@ Route::get('/',[UserListController::class,'userList' ])->name('admin.user');
 Route::get('/registration',[RegistrationController::class,'Registration' ])->name('admin.registration');
 Route::get('/edit',[EditUserController::class,'editUser' ])->name('edit.user');
 });
+
+
 
 Route::prefix('patience')->group(function () {
     Route::get('/',[PatientListController::class,'index' ])->name('patient.index');

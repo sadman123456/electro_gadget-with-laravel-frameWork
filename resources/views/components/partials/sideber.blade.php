@@ -55,7 +55,7 @@
                         </a>
                     </li>
                     <li class="nav-item {{ Route::is('admin.addcategory') ?  'active' : ''}}">
-                        <a href="{{ route('admin.addcategory')}}">
+                        <a href="{{ route('category.create')}}">
                             <i class="la la-table"></i>
                             <p class=" text-light">Category Add</p>
                         </a>

@@ -80,13 +80,18 @@
                                                                 </td>
                 
                                                                 <td class="c_center "style="padding: 22px;">
-                                                                  <a href="editproduct.html"> <button type="button" class="btn btn-primary">Edit</button></a>
+                                                                <a href="{{ route('admin.editproduct', $product->id) }}"> <button type="button" class="btn btn-primary">Edit</button></a>
                   
                                                                   </td>
                 
-                                                                  <td>
-                                                                <a class="btn btn-sm btn-outline-danger" href="{{ route('product.destroy', $product->id) }}">Delete</a>
-                                                                 </td>
+                                                                  <form action="{{ route('product.destroy', $product->id) }}" method="post">
+                                                                    @csrf
+                                                                    @method('delete')
+                                                                <td>
+                                                                <button class="btn btn-sm btn-outline-danger">Delete</button>
+                                                                </td>
+
+                                                                </form>
                                         
                                                           </tr>
                                                           

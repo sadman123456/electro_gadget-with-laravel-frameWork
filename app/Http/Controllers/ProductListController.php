@@ -17,16 +17,11 @@ class ProductListController extends Controller
 
     public function create()
     {
-        {
-            $categories= Category::all();
-
-            return view ('addproduct', compact('categories'));
-        }
+        $categories= Category::pluck('name', 'id')->toArray();
+        return view ('addproduct', compact('categories'));   
     }
 
     
-
-
     public function store(ProductRequest $request)
     {
         //image upload

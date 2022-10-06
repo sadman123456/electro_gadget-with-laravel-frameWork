@@ -106,7 +106,6 @@
                                   <x-forms.select 
                                   name='category'
                                   :options="$categories"
-                                  
                                   />
 
                                    <x-forms.input 

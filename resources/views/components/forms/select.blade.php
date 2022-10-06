@@ -7,7 +7,7 @@
   <select name="{{ $name }}" {{ $attributes->merge(['class' => 'form-control']) }} >
     <option value="">--select--</option>
     @foreach($options as $key => $option)
-    <option value="{{$key}}">{{$options}}</option>
+    <option value="{{$key}}">{{$option}}</option>
     @endforeach
   </select>
 </div>

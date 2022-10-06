@@ -74,7 +74,7 @@
                                 </div>
 
                                 <div class="row">
-                                  
+
                                 <x-forms.input 
                                     
                                     label='Purchase Price'
@@ -105,7 +105,7 @@
                                                                   
                                   <x-forms.select 
                                   name='category'
-                                  :categories="$categories"
+                                  :options="$categories"
                                   
                                   />
 

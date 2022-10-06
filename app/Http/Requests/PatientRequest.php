@@ -13,7 +13,7 @@ class PatientRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,7 @@ class PatientRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+           'image'=> 'image|mimes:jpg,png,jpeg,gif'
         ];
     }
 }

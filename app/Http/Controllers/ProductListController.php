@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ProductRequest;
 use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Http\Request;
@@ -26,8 +27,17 @@ class ProductListController extends Controller
     
 
 
-    public function store(Request $request)
+    public function store(ProductRequest $request)
     {
+        //image upload
+        // $extension= $request->file('image')->getClientOriginalExtension();
+        $orginalName= $request->file('image')->getClientOriginalName();
+        $fileName= date('Y-m-d').time().$orginalName;
+       $request->file('image')->move( storage_path('/app/public/products/'),$fileName);
+
+    //    dd($request->file('image'));
+    //end
+
         $data=([
             'name'=> $request->name,
             'model'=>$request->brand,
@@ -39,7 +49,7 @@ class ProductListController extends Controller
             'category'=>$request->category,
             'quantity'=> $request->quantity,
 
-            'image'=> $request->image,
+            'image'=> $fileName
            
 
 
@@ -52,6 +62,7 @@ class ProductListController extends Controller
               ->withMessage('Added Successfully!');
     
     }
+
 
     public function show($id)
     {
@@ -87,6 +98,14 @@ class ProductListController extends Controller
 
     public function update(Request $request, $id)
     {
+   //image upload
+        // $extension= $request->file('image')->getClientOriginalExtension();
+        $orginalName= $request->file('image')->getClientOriginalName();
+        $fileName= date('Y-m-d').time().$orginalName;
+       $request->file('image')->move( storage_path('/app/public/products/'),$fileName);
+
+    //    dd($request->file('image'));
+    //end
         $products= Product::find($id);
 
         $data=([
@@ -100,7 +119,7 @@ class ProductListController extends Controller
             'category'=>$request->category,
             'quantity'=> $request->quantity,
 
-            'image'=> $request->image,
+            'image'=> $fileName,
            
 
 

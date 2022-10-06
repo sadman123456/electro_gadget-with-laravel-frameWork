@@ -46,6 +46,8 @@
                                                           <th class="c_center" style="width:5%; padding: 25px;">Sale Price</th>
                                                           <th class="c_center" style="width:5%; padding: 25px;">Purchase Price</th>
                                                           <th class="c_center" style="width:5%; padding: 25px;">Quantity</th>  
+                                                          <th class="c_center" style="width:5%; padding: 25px;">Image</th>  
+
 
                                                           <th class="c_center" style="width:5% ;padding: 25px;">View</th>
                                                           <th class="c_center" style="width:5% ;padding: 25px;">Edit</th>
@@ -72,6 +74,10 @@
                                                               <td class="c_center "style="padding: 25px;">{{ $product->sale_price}}</td>
                                                               <td class="c_center "style="padding: 25px;">{{ $product->purchase_price}}</td>
                                                               <td class="c_center "style="padding: 25px;">{{ $product->quantity}}</td>
+
+                                                              <td class="c_center "style="padding: 25px;">
+                                                              <img style="height: 40px;width:40px;" src="{{ asset('storage/products/'.$product->image) }}"/>
+                                                              </td>
 
                 
                                                               <td class="c_center "style="padding: 22px;">
@@ -107,7 +113,9 @@
                                                           <th class="c_center" style="width:5%; padding: 25px;">Description</th>
                                                           <th class="c_center" style="width:5%; padding: 25px;">Sale Price</th>
                                                           <th class="c_center" style="width:5%; padding: 25px;">Purchase Price</th>
-                                                          <th class="c_center" style="width:5%; padding: 25px;">Quantity</th>  
+                                                          <th class="c_center" style="width:5%; padding: 25px;">Quantity</th>
+                                                          <th class="c_center" style="width:5%; padding: 25px;">Image</th>  
+  
 
                                                           <th class="c_center" style="width:5%; padding: 25px;">Available</th>
                                                           <th class="c_center" style="width:5% ;padding: 25px;">View</th>

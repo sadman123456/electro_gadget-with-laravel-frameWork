@@ -19,6 +19,7 @@ class CategoryListController extends Controller
     {
 
 
+
         $data=([
             'name'=> $request->name,
             'description'=>$request->description
@@ -45,7 +46,7 @@ class CategoryListController extends Controller
         return view ('editCategory', compact('categories'));
     }
 
-    public function update(CategoryRequest $request, $id)
+    public function update(Request $request, $id)
     {
         $categories = Category::find($id);
 

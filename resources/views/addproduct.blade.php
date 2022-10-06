@@ -20,51 +20,79 @@
                 
                           </section>
                           <section class="content">
-                            <form action="{{route('product.store')}}" method="post">
+                          <x-forms.error />
+
+                            <form action="{{route('product.store')}}" method="post" enctype="multipart/form-data">
                               @csrf
                                 <div class="row">
+                                <x-forms.input 
+                                       name='name'
+                                       label='Product name'
+                                       placeholder="Product name"
 
-                                  <div class="col" style="padding: 15px; margin-left:25px;">                  
-                                    <label>Product Name <span class="required_star">*</span></label>                 
-                                    <input type="text" name="name" class="form-control" placeholder="Product name">
-                                  </div>
-                  
-                                  <div class="col" style="padding: 15px; margin-left:25px;">
-                                    <label>Brand <span class="required_star">*</span></label>
-                                    <input type="text" name="brand" class="form-control" placeholder="Brand Name">
-                                  </div>  
-
-                                </div>
-                  
-                                <div class="row">
-                                    <div class="col" style="padding: 15px; margin-left:25px;">
-                                        <label>Description <span class="required_star">*</span></label>
-                                        <textarea class="form-control" name="description" id="exampleFormControlTextarea1" cols="1" rows="1"></textarea>           
-                                    </div>
+                                       required
+                           
+                                     />
+                                     <x-forms.input 
                                     
-                                    <div class="col" style="padding: 15px; margin-left:25px;">                  
-                                        <label>Sale Price <span class="required_star">*</span></label>                 
-                                        <input type="number" name="sale_price" class="form-control" placeholder="Sale_price">
-                                    </div> 
-                                    
-                              
+                                       label='Brand'
+                                       name='brand'
+                                       placeholder="Product name"
 
+                                       required
+                           
+                                     />
+                       
                                 </div>
 
+                                
+                  
                                 <div class="row">
 
-                                  
-                    
-                                    <div class="col" style="padding: 15px; margin-left:25px;">
-                                      <label>Purchase Price<span class="required_star">*</span></label>
-                                      <input type="number" name="Purchase_price" class="form-control" placeholder="Brand Name">
-                                    </div> 
-                                    <div class="col" style="padding: 15px; margin-left:25px;">                  
-                                        <label>Quantity <span class="required_star">*</span></label>                 
-                                        <input type="number" name="quantity" class="form-control" placeholder="Sale_price">
-                                    </div> 
-                                          
+                                  <x-forms.textarea 
+                                    name='description'
+                                    label='Description'
+                                    placeholder="Write Here"
+                           
+                                 />
+                                 
+                                 <x-forms.input 
+                                    
+                                    label='Sale Price'
+                                    type="number"
+                                    name='sale_price'
+                                    placeholder="Sale_Price "
+
+                                    required
+                        
+                                  />
+                             
+                                </div>
+
+                                <div class="row">
+                                <x-forms.input 
+                                    
+                                    label='Purchase Price'
+                                    type="number"
+                                    name='Purchase_price'
+                                    placeholder="Purchase_price"
+
+                                    required
+                        
+                                  />
+                                  <x-forms.input 
+                                    
+                                    label='Quantity'
+                                    type="number"
+                                    name='quantity'
+                                    placeholder="Quantity"
+
+                                    required
+                        
+                                  />
                                   </div>
+
+
                                   <div class="row">
 
                             
@@ -72,7 +100,7 @@
                                     <div class="col-md-6" style="padding: 15px; margin-left:25px;">
                                       <label>Category<span class="required_star">*</span></label>
 
-                                      <select class="form-select" name="category" aria-label="Default select example">
+                                      <select class="form-select form-control" name="category" aria-label="Default select example">
                                       @foreach($categories as $category)
 
                                         <option  value="{{$category->name}}">{{$category->name}}</option>
@@ -80,11 +108,20 @@
 
                                       </select>
                                     </div>  
+                                  <!-- <x-forms.select
+                                   @foreach($categories as $category)
 
-                                    <div class="col-md-5" style="padding: 15px; margin-left:25px;">
-                                      <label for="image">Product Image<span class="required_star">*</span></label> <br>
-                                     <input type="file" name="image" id="image">
-                                    </div> 
+                                   <option  value="{{$category->name}}">{{$category->name}}</option>
+                                   @endforeach
+                                   
+                                   /> -->
+
+                                   <x-forms.input 
+                                       type="file"
+                                       name='image'
+                                       label='Product Image'
+                           
+                                     />
                                           
                                   </div>
 

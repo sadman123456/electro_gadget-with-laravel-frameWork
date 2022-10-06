@@ -47,7 +47,7 @@
                                   <ul class="list-group">
                                    <center> <p class="list-group-item list-group-item-success"><b>PRODUCT IMAGE</b></p> </center>
                                    <center>
-                                      <img  style="height: 240px; width:240px;" src="./images/aiphone13pm-fcvs-sel-1-1037991-1635242483.jpg"
+                                      <img  style="height: 240px; width:240px;" src="{{ asset('storage/products/'.$products->image) }}"/>
                             
                                     </center>
                                   </ul>

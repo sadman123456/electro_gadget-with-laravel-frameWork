@@ -20,45 +20,28 @@
                 
                           </section>
                           <section class="content">
-                          <!-- @if ($errors->any())
-                        <div class="alert alert-danger">
-                          <ul>
-                          @foreach ($errors->all() as $error)
-                         <li>{{ $error }}</li>
-                           @endforeach
-                          </ul>
-                          </div>
-                           @endif -->
+                          <x-forms.error />
                             <form action="{{route('category.store')}}" method="post">
                               @csrf
                                 <div class="row">
 
-                                  <div class="col" style="padding: 15px; margin-left:25px;">                  
-                                    <label>Category Name <span class="required_star">*</span></label>                 
-                                    <input type="text"
-                                     name="name" 
-                                     value="{{ old('name') }}"
-                                     class="form-control"
-                                     placeholder="Category name">
-                                     @error('name')
-                                   <div class="from text text-danger">{{ $message }}</div>
-                                       @enderror
-                                  </div>
-                  
-                                  <div class="col-md-6" style="padding: 15px; margin-left:25px;">
-                                        <label>Description <span class="required_star">*</span></label>
-                                        <textarea 
-                                         class="form-control"
-                                         name="description"
-                                         value="{{ old('description') }}
-                                          id="exampleFormControlTextarea1"
-                                           cols="1"
-                                           rows="1">
-                                          </textarea> 
-                                          @error('description')
-                                   <div class="from text text-danger">{{ $message }}</div>
-                                       @enderror          
-                                    </div>
+                            <x-forms.input 
+                            type="text"
+                            name='name'
+                            :value="old('name')"
+                            label='Category Name'
+                            placeholder="Category name"
+                           
+                            />
+                            <x-forms.textarea 
+                            name='description'
+                            :value="old('name')"
+
+                            label='Description'
+                            placeholder="Write Here"
+                           
+                            />
+                 
 
                                 </div>
                   

@@ -24,11 +24,8 @@
                         <section class="content">
                             <div class="row">
                                 <div class="col-md-12 col-sm-12">
-                                    @if(session('message'))
-                                    <p class="text-success">
-                                        {{ session('message') }}
-                                    </p>
-                                    @endif
+                                <x-forms.massege />
+
 
                                     <!-- general form elements -->
                                     <div class="box box-primary">

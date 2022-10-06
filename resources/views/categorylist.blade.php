@@ -14,11 +14,7 @@
                                 </div>
                                 <div class="col-md-6"></div>
                                 <div class="col-md-2 col-sm-6" style="padding: 25px;">
-<<<<<<< HEAD
                                     <a href="{{route('category.create')}}"> <button type="button" class="btn btn-primary">Add
-=======
-                                    <a href="{{route('admin.addcategory')}}"> <button type="button" class="btn btn-primary">Add
->>>>>>> 5fce14271685b22aa9827a44104ebe5bee3505cc
                                             Category</button></a>
 
                                 </div>
@@ -28,16 +24,8 @@
                         <section class="content">
                             <div class="row">
                                 <div class="col-md-12 col-sm-12">
-<<<<<<< HEAD
                                 <x-forms.massege />
 
-=======
-                                    @if(session('message'))
-                                    <p class="text-success">
-                                        {{ session('message') }}
-                                    </p>
-                                    @endif
->>>>>>> 5fce14271685b22aa9827a44104ebe5bee3505cc
 
                                     <!-- general form elements -->
                                     <div class="box box-primary">

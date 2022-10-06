@@ -2,15 +2,10 @@
 
 namespace App\Http\Controllers;
 
-<<<<<<< HEAD
 use App\Http\Requests\CategoryRequest;
 use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
-=======
-use App\Models\Category;
-use Illuminate\Http\Request;
->>>>>>> 5fce14271685b22aa9827a44104ebe5bee3505cc
 
 class CategoryListController extends Controller
 {
@@ -20,16 +15,12 @@ class CategoryListController extends Controller
     {
         return view ('addCategory');
     }
-<<<<<<< HEAD
+    
     public function store(CategoryRequest $request)
     {
 
 
 
-=======
-    public function store(Request $request)
-    {
->>>>>>> 5fce14271685b22aa9827a44104ebe5bee3505cc
         $data=([
             'name'=> $request->name,
             'description'=>$request->description

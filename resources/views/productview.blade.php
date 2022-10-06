@@ -16,11 +16,7 @@
                               </div>
                             <div class="col-md-6"></div>
                               <div class="col-md-2 col-sm-6" style="padding: 25px;">
-<<<<<<< HEAD
                                 <a href="{{route('admin.productlist')}}"> <button type="button" class="btn btn-primary">Back Product List</button></a>
-=======
-                                <a href="productlist.html"> <button type="button" class="btn btn-primary">Back Product List</button></a>
->>>>>>> 5fce14271685b22aa9827a44104ebe5bee3505cc
                 
                               </div>
                             </div>
@@ -51,11 +47,7 @@
                                   <ul class="list-group">
                                    <center> <p class="list-group-item list-group-item-success"><b>PRODUCT IMAGE</b></p> </center>
                                    <center>
-<<<<<<< HEAD
                                       <img  style="height: 240px; width:240px;" src="{{ asset('storage/products/'.$products->image) }}"/>
-=======
-                                      <img  style="height: 240px; width:240px;" src="./images/aiphone13pm-fcvs-sel-1-1037991-1635242483.jpg"
->>>>>>> 5fce14271685b22aa9827a44104ebe5bee3505cc
                             
                                     </center>
                                   </ul>

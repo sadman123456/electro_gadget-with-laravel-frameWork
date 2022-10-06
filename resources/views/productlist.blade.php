@@ -26,6 +26,8 @@
                           <section class="content">
                             <div class="row">
                                 <div class="col-md-12 col-sm-12">
+                                <x-forms.massege />
+
                                     <!-- general form elements -->
                                     <div class="box box-primary">
                                         <!-- /.box-header -->
@@ -46,11 +48,8 @@
                                                           <th class="c_center" style="width:5%; padding: 25px;">Sale Price</th>
                                                           <th class="c_center" style="width:5%; padding: 25px;">Purchase Price</th>
                                                           <th class="c_center" style="width:5%; padding: 25px;">Quantity</th>  
-<<<<<<< HEAD
                                                           <th class="c_center" style="width:5%; padding: 25px;">Image</th>  
 
-=======
->>>>>>> 5fce14271685b22aa9827a44104ebe5bee3505cc
 
                                                           <th class="c_center" style="width:5% ;padding: 25px;">View</th>
                                                           <th class="c_center" style="width:5% ;padding: 25px;">Edit</th>
@@ -78,13 +77,10 @@
                                                               <td class="c_center "style="padding: 25px;">{{ $product->purchase_price}}</td>
                                                               <td class="c_center "style="padding: 25px;">{{ $product->quantity}}</td>
 
-<<<<<<< HEAD
                                                               <td class="c_center "style="padding: 25px;">
                                                               <img style="height: 40px;width:40px;" src="{{ asset('storage/products/'.$product->image) }}"/>
                                                               </td>
 
-=======
->>>>>>> 5fce14271685b22aa9827a44104ebe5bee3505cc
                 
                                                               <td class="c_center "style="padding: 22px;">
                                                               <a href="{{ route('admin.viewproduct', $product->id) }}">  <button type="button" class="btn btn-success">View</button></a>
@@ -92,7 +88,6 @@
                                                                 </td>
                 
                                                                 <td class="c_center "style="padding: 22px;">
-<<<<<<< HEAD
                                                                 <a href="{{ route('admin.editproduct', $product->id) }}"> <button type="button" class="btn btn-primary">Edit</button></a>
                   
                                                                   </td>
@@ -105,15 +100,6 @@
                                                                 </td>
 
                                                                 </form>
-=======
-                                                                  <a href="editproduct.html"> <button type="button" class="btn btn-primary">Edit</button></a>
-                  
-                                                                  </td>
-                
-                                                                  <td>
-                                                                <a class="btn btn-sm btn-outline-danger" href="{{ route('product.destroy', $product->id) }}">Delete</a>
-                                                                 </td>
->>>>>>> 5fce14271685b22aa9827a44104ebe5bee3505cc
                                         
                                                           </tr>
                                                           
@@ -129,13 +115,9 @@
                                                           <th class="c_center" style="width:5%; padding: 25px;">Description</th>
                                                           <th class="c_center" style="width:5%; padding: 25px;">Sale Price</th>
                                                           <th class="c_center" style="width:5%; padding: 25px;">Purchase Price</th>
-<<<<<<< HEAD
                                                           <th class="c_center" style="width:5%; padding: 25px;">Quantity</th>
                                                           <th class="c_center" style="width:5%; padding: 25px;">Image</th>  
   
-=======
-                                                          <th class="c_center" style="width:5%; padding: 25px;">Quantity</th>  
->>>>>>> 5fce14271685b22aa9827a44104ebe5bee3505cc
 
                                                           <th class="c_center" style="width:5%; padding: 25px;">Available</th>
                                                           <th class="c_center" style="width:5% ;padding: 25px;">View</th>

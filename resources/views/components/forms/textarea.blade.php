@@ -16,6 +16,7 @@
 
                                            cols="1"
                                            rows="1">
+                                          {{$value}}
                                           </textarea> 
                                           @error($name)
                                    <div class="from text text-danger">{{ $message }}</div>

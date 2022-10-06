@@ -20,11 +20,15 @@
                 
                           </section>
                           <section class="content">
+<<<<<<< HEAD
                           <x-forms.error />
+=======
+>>>>>>> 5fce14271685b22aa9827a44104ebe5bee3505cc
                             <form action="{{route('category.store')}}" method="post">
                               @csrf
                                 <div class="row">
 
+<<<<<<< HEAD
                             <x-forms.input 
                             type="text"
                             name='name'
@@ -42,6 +46,17 @@
                            
                             />
                  
+=======
+                                  <div class="col" style="padding: 15px; margin-left:25px;">                  
+                                    <label>Category Name <span class="required_star">*</span></label>                 
+                                    <input type="text" name="name" class="form-control" placeholder="Category name">
+                                  </div>
+                  
+                                  <div class="col-md-6" style="padding: 15px; margin-left:25px;">
+                                        <label>Description <span class="required_star">*</span></label>
+                                        <textarea class="form-control" name="description" id="exampleFormControlTextarea1" cols="1" rows="1"></textarea>           
+                                    </div>
+>>>>>>> 5fce14271685b22aa9827a44104ebe5bee3505cc
 
                                 </div>
                   

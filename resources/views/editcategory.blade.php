@@ -20,14 +20,19 @@
                 
                           </section>
                           <section class="content">
+<<<<<<< HEAD
                           <form action="{{route('category.update', $categories->id)}}"
                            method="post" enctype="multipart/form-data"
                           >
+=======
+                          <form action="{{route('category.update', $categories->id)}}" method="post">
+>>>>>>> 5fce14271685b22aa9827a44104ebe5bee3505cc
                               @csrf
                               @method('patch ')
                             
                                 <div class="row">
 
+<<<<<<< HEAD
 
                                 <x-forms.input 
                                     type="text"
@@ -48,6 +53,19 @@
 
 
                                 <!-- -->
+=======
+                                  <div class="col" style="padding: 15px; margin-left:25px;">                  
+                                    <label>Category Name <span class="required_star">*</span></label>                 
+                                    <input type="text" name="name" value="{{$categories->name}}"class="form-control" placeholder="Category name">
+                                  </div>
+                  
+                                  <div class="col-md-6" style="padding: 15px; margin-left:25px;">
+                                        <label>Description <span class="required_star">*</span></label>
+                                        <textarea class="form-control" name="description" value="{{ $categories->description }}" id="exampleFormControlTextarea1" cols="1" rows="1">{{ $categories->description }}</textarea>           
+                                    </div>
+
+                                </div>
+>>>>>>> 5fce14271685b22aa9827a44104ebe5bee3505cc
                   
       
                                 <div class="form-row" style="padding: 15px; margin-left:15px;">

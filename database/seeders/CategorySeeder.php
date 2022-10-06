@@ -30,5 +30,8 @@ class CategorySeeder extends Seeder
             ]);
 
     }
+<<<<<<< HEAD
   
+=======
+>>>>>>> 5fce14271685b22aa9827a44104ebe5bee3505cc
 }

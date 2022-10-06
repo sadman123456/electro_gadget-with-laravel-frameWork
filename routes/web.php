@@ -31,7 +31,11 @@ Route::get('/',[DashBoardController::class,'DashBoard' ])->name('admin.dashboard
 Route::prefix('category')->group(function () {
 
 Route::get('/', [CategoryListController::class,'index' ])->name('admin.categorylist');
+<<<<<<< HEAD
 Route::get('/add',[CategoryListController::class,'create' ])->name('category.create');
+=======
+Route::get('/add',[CategoryListController::class,'create' ])->name('admin.addcategory');
+>>>>>>> 5fce14271685b22aa9827a44104ebe5bee3505cc
 Route::post('/',[CategoryListController::class,'store' ])->name('category.store');
 
 
@@ -47,6 +51,7 @@ Route::prefix('product')->group(function () {
 Route::get('/', [ProductListController::class,'index' ])->name('admin.productlist');
 Route::get('/add',[ProductListController::class,'create' ])->name('admin.addproduct');
 Route::post('/add',[ProductListController::class,'store'])->name('product.store');
+<<<<<<< HEAD
 
 Route::get('/view/{id}',[ProductListController::class,'show' ])->name('admin.viewproduct');
 
@@ -55,6 +60,14 @@ Route::patch('/{id}/edit',[ProductListController::class,'update' ])->name('produ
 
 
 Route::delete('/{id}/delete', [ProductListController::class,'destroy' ])->name('product.destroy');
+=======
+Route::get('/view/{id}',[ProductListController::class,'show' ])->name('admin.viewproduct');
+
+
+
+Route::get('/edit',[EditProductController::class,'editProduct' ])->name('admin.editproduct');
+Route::get('/{id}/delete', [ProductListController::class,'destroy' ])->name('product.destroy');
+>>>>>>> 5fce14271685b22aa9827a44104ebe5bee3505cc
 
 
 });
@@ -65,8 +78,11 @@ Route::get('/registration',[RegistrationController::class,'Registration' ])->nam
 Route::get('/edit',[EditUserController::class,'editUser' ])->name('edit.user');
 });
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 5fce14271685b22aa9827a44104ebe5bee3505cc
 Route::prefix('patience')->group(function () {
     Route::get('/',[PatientListController::class,'index' ])->name('patient.index');
     Route::get('/{id}/show',[PatientListController::class,'show' ])->name('patient.show');

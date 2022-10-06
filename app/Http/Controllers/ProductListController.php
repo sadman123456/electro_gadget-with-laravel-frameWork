@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+<<<<<<< HEAD
 use App\Http\Requests\ProductRequest;
+=======
+>>>>>>> 5fce14271685b22aa9827a44104ebe5bee3505cc
 use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Http\Request;
@@ -24,6 +27,7 @@ class ProductListController extends Controller
         }
     }
 
+<<<<<<< HEAD
     
 
 
@@ -38,6 +42,10 @@ class ProductListController extends Controller
     //    dd($request->file('image'));
     //end
 
+=======
+    public function store(Request $request)
+    {
+>>>>>>> 5fce14271685b22aa9827a44104ebe5bee3505cc
         $data=([
             'name'=> $request->name,
             'model'=>$request->brand,
@@ -49,7 +57,11 @@ class ProductListController extends Controller
             'category'=>$request->category,
             'quantity'=> $request->quantity,
 
+<<<<<<< HEAD
             'image'=> $fileName
+=======
+            'image'=> $request->image,
+>>>>>>> 5fce14271685b22aa9827a44104ebe5bee3505cc
            
 
 
@@ -63,7 +75,10 @@ class ProductListController extends Controller
     
     }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5fce14271685b22aa9827a44104ebe5bee3505cc
     public function show($id)
     {
         $products= Product::find($id);
@@ -87,6 +102,7 @@ class ProductListController extends Controller
               ->withmMessage('Deleted Successfully!');
     }
 
+<<<<<<< HEAD
 
     public function edit($id)
     
@@ -134,4 +150,6 @@ class ProductListController extends Controller
     }
 
 
+=======
+>>>>>>> 5fce14271685b22aa9827a44104ebe5bee3505cc
 }

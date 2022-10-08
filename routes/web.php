@@ -9,10 +9,7 @@ use App\Http\Controllers\PatientListController;
 use App\Http\Controllers\ProductListController;
 use App\Http\Controllers\RegistrationController;
 use App\Http\Controllers\UserListController;
-
-
-
-
+use App\Models\Category;
 
 // http verbs: get, post, put/patch, delete
 
@@ -28,16 +25,22 @@ Route::get('/',[DashBoardController::class,'DashBoard' ])->name('admin.dashboard
 
 Route::prefix('category')->group(function () {
 
-Route::get('/', [CategoryListController::class,'index' ])->name('admin.categorylist');
+Route::get('/', [CategoryListController::class,'index' ])->name('category.index');
 
 Route::get('/add',[CategoryListController::class,'create' ])->name('category.create');
 Route::post('/add',[CategoryListController::class,'store' ])->name('category.store');
 
-
-Route::get('/{id}/edit',[CategoryListController::class,'editCategory' ])->name('admin.editcategory');
+Route::get('/{id}/edit',[CategoryListController::class,'editCategory' ])->name('category.edit');
 Route::patch('/{id}/edit',[CategoryListController::class,'update' ])->name('category.update');
 
 Route::delete('/{id}/delete', [CategoryListController::class,'destroy' ])->name('category.destroy');
+
+Route::get('/categories-trash', [CategoryListController::class,'trash' ])->name('category.trash');
+Route::get('/{id}/restore', [CategoryListController::class,'restore' ])->name('category.restore');
+Route::get('/{id}/delete', [CategoryListController::class,'delete' ])->name('category.delete');
+
+//    Route::resource('categories', CategoryListController::class);
+
 
 
 });
@@ -54,6 +57,13 @@ Route::patch('/{id}/edit',[ProductListController::class,'update' ])->name('produ
 
 
 Route::delete('/{id}/delete', [ProductListController::class,'destroy' ])->name('product.destroy');
+
+Route::get('/products-trash', [ProductListController::class,'trash' ])->name('product.trash');
+Route::get('/{id}/restore', [ProductListController::class,'restore' ])->name('product.restore');
+Route::get('/{id}/delete', [ProductListController::class,'delete' ])->name('product.delete');
+
+// Route::resource('product', CategoryListController::class);
+
 
 
 });

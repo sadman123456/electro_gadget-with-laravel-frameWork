@@ -33,7 +33,8 @@ class CategoryRequest extends FormRequest
     }
     case 'PATCH': {
         return [
-            'name' => 'required|unique:categories,'.$this->get('id').'|max:255|min:4',
+            
+            'name' => 'required|max:255|min:4|unique:categories,name'.$this->get('id'),
             
             'description' => 'required|max:255|min:6'
         ];

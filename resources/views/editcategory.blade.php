@@ -13,7 +13,7 @@
                               </div>
                             <div class="col-md-6"></div>
                               <div class="col-md-2 col-sm-6" style="padding: 25px;">
-                                <a href="{{route('admin.categorylist')}}"> <button type="button" class="btn btn-primary">Back Category List</button></a>
+                                <a href="{{route('category.index')}}"> <button type="button" class="btn btn-primary">Back Category List</button></a>
                 
                               </div>
                             </div>

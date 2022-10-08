@@ -23,8 +23,49 @@ class ProductRequest extends FormRequest
      */
     public function rules()
     {
+        $imageValidation = 'image|mimes:jpg,png,jpeg,gif';
+        switch ($this->method()) {
+            case 'POST': {
         return [
-            'image'=>''
+            'name' => 'required|unique:products|max:255|min:4',
+            'brand' => 'required|max:50|min:4',
+            'sale_price'=> 'required|max:7|min:2|digits_between:0,9',
+            'Purchase_price'=> 'required|max:7|min:2|digits_between:0,9',
+            'category'=> 'required',
+            'quantity'=> 'required|max:9|min:1|digits_between:0,9', 
+            'description' => 'required|max:255|min:6',
+            'image'=>'required|'. $imageValidation
+        ];
+    }
+         case 'PATCH': {
+
+        return [
+            'name' => 'required|max:255|min:4|unique:products,name,'.$this->id,
+
+            'brand' => 'required|max:50|min:4',
+            'sale_price'=> 'required|max:7|min:2|digits_between:0,9',
+            'Purchase_price'=> 'required|max:7|min:2|digits_between:0,9',
+            'category'=> 'required',
+            'quantity'=> 'required|max:9|min:1|digits_between:0,9', 
+            'description' => 'required|max:255|min:6',
+            'image'=> $imageValidation
+
+        ];
+    }
+
+}
+    }
+    public function messages()
+    {
+        return [
+            'name.required'=>'A name must be required',
+            'name.unique'=>'A name must be unique',
+            'brand.required'=>'A brand must be required',
+            'sale_price.required'=>'sale_price must be required',
+            'purchase_price.required'=>'A purchase_price must be required',
+            'category.required'=>'A category must be selected',
+            'quantity.required'=>'A quantity must be required',
+
         ];
     }
 }

@@ -48,8 +48,8 @@
                             <p class=" text-light">All Product</p>
                         </a>
                     </li>
-                    <li class="nav-item {{ Route::is('admin.categorylist') ?  'active' : ''}}">
-                        <a href="{{ route('admin.categorylist')}}">
+                    <li class="nav-item {{ Route::is('category.index') ?  'active' : ''}}">
+                        <a href="{{ route('category.index')}}">
                             <i class="la la-table"></i>
                             <p class=" text-light">Category</p>
                         </a>

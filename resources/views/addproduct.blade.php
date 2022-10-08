@@ -104,8 +104,10 @@
                                   <div class="row">
                                                                   
                                   <x-forms.select 
+                                  label='Category'
                                   name='category'
                                   :options="$categories"
+                      
                                   />
 
                                    <x-forms.input 

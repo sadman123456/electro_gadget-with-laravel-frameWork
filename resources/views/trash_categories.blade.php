@@ -1,6 +1,6 @@
 <x-master>
     <x-slot:title>
-        Admin | CategoryList
+        Admin | CategoryTrash
         </x-slot>
 
         <div class="main-panel">
@@ -10,19 +10,15 @@
                         <section class="content-header">
                             <div class="row">
                                 <div class="col-md-3 col-sm-6" style="padding: 25px;">
-                                    <h2>Category List</h2>
+                                    <h2>Category Trash</h2>
                                 </div>
                                 <div class="col-md-6"></div>
                                 <div class="col-md-2 col-sm-6" style="padding: 25px;">
-                                    <a href="{{route('category.create')}}"> <button type="button" class="btn btn-primary">Add
+                                    <a href="{{route('category.index')}}"> <button type="button" class="btn btn-primary">Back
                                             Category</button></a>
 
                                 </div>
-                                <div class="col-md-2 col-sm-6" style="padding: 25px;">
-                                    <a href="{{route('category.trash')}}"> <button type="button" class="btn btn-primary">trash
-                                        </button></a>
 
-                                </div>
                             </div>
 
                         </section>
@@ -78,17 +74,21 @@
                                                                 </td> -->
 
                                                                 <td class="c_center " style="padding: 22px;">
-                                                                    <a href="{{ route('category.edit', $category->id) }}"> <button type="button" class="btn btn-primary">Edit</button></a>
+                                                                    <a href="{{ route('category.restore', $category->id) }}"> <button type="button" class="btn btn-primary">Restore</button></a>
 
                                                                 </td>
-                                                                <form action="{{ route('category.destroy', $category->id) }}" method="post">
+                                                                <td class="c_center " style="padding: 22px;">
+                                                                    <a href="{{ route('category.delete', $category->id) }}"> <button class="btn btn-sm btn-outline-danger"onclick="return confirm('Are You sure want to delete ')">Delete</button></a>
+
+                                                                </td>
+                                                                <!-- <form action="{{ route('category.delete', $category->id) }}" method="post">
                                                                     @csrf
-                                                                    @method('delete')
+                                                                    @
                                                                     <td>
-                                                                        <button class="btn btn-sm btn-outline-danger" onclick="return confirm('Are You sure want to delete ')">Delete</button>
+                                                                        <button class="btn btn-sm btn-outline-danger">Delete</button>
                                                                     </td>
 
-                                                                </form>
+                                                                </form> -->
 
 
 

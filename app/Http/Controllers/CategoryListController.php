@@ -59,27 +59,55 @@ class CategoryListController extends Controller
         $categories->update($data);
 
         return redirect()
-              ->route('admin.categorylist')
+              ->route('category.index')
               ->withMessage('Updated Successfully!');
     
     }
   
 
-    public function destroy($id)
+    public function destroy ($id)
     {
-        $category = Category::find($id);
-        $category->delete();
+          $category = Category::find($id);
 
-        // Session::flash('message', 'Deleted Successfully!');
+          $category->delete();
 
-        // return redirect()
-        //       ->route('categories.index')
-        //       ->with('message', 'Deleted Successfully!');
-
+          // Session::flash('message', 'Successfully deleted');
+          // return redirect()
+          //         ->route('categories.index')
+          //         ->with('message', 'Successfully deleted');
+  
         return redirect()
-              ->route('admin.categorylist')
+              ->route('category.index')
               ->withMessage('Deleted Successfully!');
     }
 
+
+    public function trash()
+    {
+        $categories = Category::onlyTrashed()->get();
+    
+        return view ('trash_categories', compact('categories'));
+    }
+
+    public function restore($id)
+    {
+        $category = Category::onlyTrashed()->find($id);
+        $category->restore();
+
+        return redirect()
+        ->route('category.trash')
+        ->withMessage('Successfully Restore!');
+
+    }
+
+    public function delete($id)
+    {
+        $category = Category::onlyTrashed()->find($id);
+        $category->forceDelete();
+        return redirect()
+        ->route('category.trash')
+        ->withMessage('Successfully Deleted!');
+
+    }
 
 }

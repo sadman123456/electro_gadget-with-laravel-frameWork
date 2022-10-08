@@ -13,7 +13,7 @@
                 </div>
                 <div class="col-md-6"></div>
                 <div class="col-md-2 col-sm-6" style="padding: 25px;">
-                  <a href="{{route('admin.productlist')}}"> <button type="button" class="btn btn-primary">Back Product List</button></a>
+                  <a href="{{route('category.index')}}"> <button type="button" class="btn btn-primary">Back Product List</button></a>
 
                 </div>
               </div>
@@ -24,17 +24,38 @@
                 @csrf
                 @method('patch')
                 <div class="row">
-                  <x-forms.input name='name' label='Product name' placeholder="Product name" :value="old('name',$products->name)" required />
-                  <x-forms.input label='Brand' name='brand' :value="old('brand',$products->model)" placeholder="Product Brand" required />
+                  <x-forms.input 
+                  name='name' 
+                  label='Product name' 
+                  placeholder="Product name" 
+                  :value="old('name',$products->name)" 
+                  required />
+
+                  <x-forms.input 
+                  label='Brand' 
+                  name='brand' 
+                  :value="old('brand',$products->model)" 
+                  placeholder="Product Brand" 
+                  required />
 
                 </div>
 
                 <div class="row">
 
 
-                  <x-forms.textarea name='description' :value="old('description', $products->description)" label='Description' placeholder="Write Here" />
+                  <x-forms.textarea 
+                  name='description' 
+                  :value="old('description', $products->description)" 
+                  label='Description' 
+                  placeholder="Write Here" />
 
-                  <x-forms.input label='Sale Price' type="number" name='sale_price' :value="old('sale_price',$products->sale_price)" placeholder="Sale_Price " required />
+                  <x-forms.input 
+                  label='Sale Price' 
+                  type="number" 
+                  name='sale_price' 
+                  :value="old('sale_price',$products->sale_price)" 
+                  placeholder="Sale_Price " 
+                  required />
 
 
 
@@ -42,31 +63,38 @@
 
                 <div class="row">
 
-                  <x-forms.input label='Purchase Price' type="number" name='Purchase_price' :value="old('Purchase_price',$products->purchase_price)" placeholder="Purchase_price" required />
-                  <x-forms.input label='Quantity' type="number" name='quantity' :value="old('quantity',$products->quantity)" placeholder="Quantity" required />
+                  <x-forms.input 
+                  label='Purchase Price' 
+                  type="number" 
+                  name='Purchase_price' 
+                  :value="old('Purchase_price',$products->purchase_price)" 
+                  placeholder="Purchase_price" 
+                  required />
+
+                  <x-forms.input label='Quantity' 
+                  type="number"
+                  name='quantity' 
+                  :value="old('quantity',$products->quantity)" 
+                  placeholder="Quantity" required />
+
                 </div>
+              <img style="height: 40px;width:40px; margin-left:55%;" src="{{ asset('storage/products/'.$products->image) }}"/>
+
 
                 <div class="row">
+                  <x-forms.select 
+                  label="Category"
+                  name='category' 
+                  :options="$categories"
+                  :value="old('category', $products->category)" />
 
-                  <div class="col" style="padding: 15px; margin-left:25px;">
-                    <label>Category<span class="required_star">*</span></label>
-
-                    <select class="form-select" name="category" aria-label="Default select example">
-                      <option value="{{$products->category}}">{{$products->category}}</option>
-
-                      @foreach($categories as $category)
-
-                      <option value="{{$category->name}}">{{$category->name}}</option>
-                      @endforeach
-
-                    </select>
-                  </div>
-
-                  <div class="col" style="padding: 15px; margin-left:25px;">
-                    <label for="image">Product Image<span class="required_star">*</span></label> <br>
-                    <input type="file" id="image">
-                  </div>
-
+                  <x-forms.input 
+              
+                  type="file" 
+                  name='image' 
+                  :value="old('image', $products->image)" 
+                  label='Product Image' 
+                  />
                 </div>
 
 

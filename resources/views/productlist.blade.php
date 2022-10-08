@@ -12,14 +12,23 @@
                     <div class="col-lg-12 col-sm-12">
                         <section class="content-header">
                             <div class="row">
-                              <div class="col-md-3 col-sm-6" style="padding: 25px;">
+                              <div class="col-md-8 col-sm-6" style="padding: 25px;">
                                 <h2>Products List</h2>
                               </div>
-                            <div class="col-md-6"></div>
-                              <div class="col-md-2 col-sm-6" style="padding: 25px;">
+                            <div class="col-md-4">
+                            <div class="col-md-2 col-sm-6" style="padding: 25px;">
+                                    <a href="{{route('product.trash')}}"> 
+                                    <button class="btn btn-sm btn-outline-danger">Trash</button>
+                                    </a>
+
+                                </div>
+                                <div class="col-md-2 col-sm-6" style="padding: 25px;">
                                 <a href="{{ route('admin.addproduct')}}"><button type="button" class="btn btn-primary">Add Products</button></a>
                 
                               </div>
+                          
+                            </div>
+                           
                             </div>
                 
                           </section>
@@ -96,7 +105,7 @@
                                                                     @csrf
                                                                     @method('delete')
                                                                 <td>
-                                                                <button class="btn btn-sm btn-outline-danger">Delete</button>
+                                                                <button class="btn btn-sm btn-outline-danger"onclick="return confirm('Are You sure want to delete ')">Delete</button>
                                                                 </td>
 
                                                                 </form>

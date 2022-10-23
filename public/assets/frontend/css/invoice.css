@@ -1,0 +1,76 @@
+body {
+    background-color: aliceblue;
+}
+
+.top {
+    height: 6rem;
+    background-color: brown;
+    text-align: left;
+}
+
+.top h1 {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    padding: 1rem 2rem;
+    margin-left: 4rem;
+    font-weight: bolder;
+    font-size: 4rem;
+    color: white;
+}
+
+.info ul li {
+    list-style: none;
+    padding: 0.5rem 1rem;
+    font-family: Verdana, Geneva, sans-serif;
+
+
+}
+
+.info b {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 1.2rem;
+}
+
+.bill .left {
+    font-family: "Times New Roman", Times, serif;
+}
+
+.bill .left li {
+    list-style: none;
+    padding: 0.3rem 1rem;
+}
+
+.bill .right {
+    font-family: Tahoma, Geneva, sans-serif;
+}
+
+.bill .right li {
+    list-style: none;
+    
+}
+
+table {
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+.terms {
+    padding: 1rem 5rem;
+    margin-top: 2rem;
+    font-family: "Lucida Console", Monaco, monospace;
+
+
+}
+
+.terms p {
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 10pt;
+}
+
+footer {
+    height: 3rem;
+    bottom: 0;
+    background-color: var(--baseColor);
+    font-size: 16pt;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

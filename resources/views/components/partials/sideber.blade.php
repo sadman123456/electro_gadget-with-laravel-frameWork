@@ -42,10 +42,11 @@
                             <p class=" text-light">Dashboard</p>
                         </a>
                     </li>
-                    <li class="nav-item {{ Route::is('admin.productlist') ?  'active' : ''}}">
-                        <a href="{{ route('admin.productlist')}}">
+                    <li class="nav-item {{ Route::is('users.index') ?  'active' : ''}}">
+                        <a href="{{route('users.index')}}">
                             <i class="la la-table"></i>
-                            <p class=" text-light">All Product</p>
+                            <p class=" text-light">User List</p>
+                            <span class="badge badge-warning"></span>
                         </a>
                     </li>
                     <li class="nav-item {{ Route::is('category.index') ?  'active' : ''}}">
@@ -54,32 +55,39 @@
                             <p class=" text-light">Category</p>
                         </a>
                     </li>
-                    <li class="nav-item {{ Route::is('admin.addcategory') ?  'active' : ''}}">
+                    <li class="nav-item {{ Route::is('category.create') ?  'active' : ''}}">
                         <a href="{{ route('category.create')}}">
                             <i class="la la-table"></i>
                             <p class=" text-light">Category Add</p>
                         </a>
                     </li>
-                    <li class="nav-item {{ Route::is('patient.index') ?  'active' : ''}}">
-                        <a href="{{ route('patient.index')}}">
+                    <li class="nav-item {{ Route::is('brands.index') ?  'active' : ''}}">
+                        <a href="{{ route('brands.index')}}">
                             <i class="la la-table"></i>
-                            <p class=" text-light">Patient List</p>
+                            <p class=" text-light">Brand List</p>
                         </a>
                     </li>
 
-                    <li class="nav-item {{ Route::is('admin.addpatient') ?  'active' : ''}}">
-                        <a href="{{ route('admin.addpatient')}}">
+      
+                    <li class="nav-item {{ Route::is('product.index') ?  'active' : ''}}">
+                        <a href="{{ route('product.index')}}">
                             <i class="la la-table"></i>
-                            <p class=" text-light"> Add Patient</p>
+                            <p class=" text-light">All Product</p>
                         </a>
                     </li>
-                
-                    <li class="nav-item {{ Route::is('admin.addproduct') ?  'active' : ''}}">
-                        <a href="{{ route('admin.addproduct')}}">
+                    <li class="nav-item {{ Route::is('product.create') ?  'active' : ''}}">
+                        <a href="{{ route('product.create')}}">
                             <i class="la la-table"></i>
                             <p class=" text-light">Add Product</p>
                         </a>
                     </li>
+                    <li class="nav-item {{ Route::is('colors.index') ?  'active' : ''}}">
+                        <a href="{{ route('colors.index')}}">
+                            <i class="la la-table"></i>
+                            <p class=" text-light">Color List</p>
+                        </a>
+                    </li>
+                                    
                     <li class="nav-item #">
                         <a href="#">
                             <i class="la la-table"></i>
@@ -96,13 +104,7 @@
                             <span class="badge badge-success"></span>
                         </a>
                     </li>
-                    <li class="nav-item {{ Route::is('admin.user') ?  'active' : ''}}">
-                        <a href="{{route('admin.user')}}">
-                            <i class="la la-table"></i>
-                            <p class=" text-light">User List</p>
-                            <span class="badge badge-warning"></span>
-                        </a>
-                    </li>
+          
                 </ul>
             </div>
         </div>

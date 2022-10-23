@@ -1,0 +1,79 @@
+.under_breadcrumb a {
+    text-decoration: none;
+}
+.payment-button img{
+ height: 100px;
+ width: 100%;
+ border-radius: 6px;
+ cursor: pointer;
+}
+.return_top_cart{
+    font-size: medium;
+    color: #1778B9;
+    font-weight: 600;
+}
+.continue-button{
+    background-color: rgb(254, 215, 0);
+    border: none;
+    font-weight: 600;
+    padding: 15px;
+    border-radius: 7px;
+}
+.cm-card-image{
+position: relative;
+}
+.cm-card-image img{
+
+    
+    height: 50px;
+    width: 50px;
+    border: 1px solid gray;
+    border-radius: 6px;
+    padding: 0 5px;
+}
+.circle {
+    position: absolute;
+    top: -5px;
+    right: -3px;
+    width: 15px;
+    height: 15px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+    background: gray;
+    color: white;
+  }
+  .circle p{
+    margin: 0;
+    font-size: 10px;
+    text-align: center;
+  }
+  .right-side{
+    background: #FAFAFA;
+    border-left: 1px solid gray;
+  }
+  .right-side p{
+    margin-bottom: 0;
+  }
+.apply-button{
+    background-color: rgb(254, 215, 0);
+    border: none;
+    font-weight: 600;
+    padding: 8px 20px;
+    border-radius: 7px;
+}
+.shipping p{
+ font-size: 12px;
+ font-weight: 500;
+}
+.taxes{
+    font-size: 12px;
+    font-weight: 500;
+}
+
+@media (max-width:991px) {
+    .right-side{
+        background: #FAFAFA;
+        border-left: none;
+      }
+}

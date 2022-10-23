@@ -1,0 +1,31 @@
+.contact .row {
+    height: fit-content;
+    margin-bottom: 3rem;
+    background-color: #4a3053;
+    color: white;
+
+
+}
+
+
+
+.contact .image img {
+    height: 100%;
+
+}
+
+.contactForm input, textarea {
+    padding: 0.7rem;
+    background-color: rgba(209, 238, 250, 0.986);
+    border-radius: 1rem;
+}
+
+.contactDetails i {
+    font-size: 4rem;
+}
+
+.contactDetails .item {
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+    height: 8rem;
+
+}

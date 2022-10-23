@@ -16,17 +16,12 @@ return new class extends Migration
         Schema::create('products', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('model');
             $table->float('sale_price');
             $table->float('purchase_price');
             $table->text('description');
-            $table->string('category');
             $table->integer('quantity');
             $table->string('image')->nullable();
-
-
-        
-
+            $table->boolean('is_active')->default(false);
             $table->timestamps();
         });
     }

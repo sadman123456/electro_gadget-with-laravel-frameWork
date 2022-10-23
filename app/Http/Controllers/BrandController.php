@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Brand;
 use Illuminate\Http\Request;
 
 class BrandController extends Controller
@@ -13,9 +14,10 @@ class BrandController extends Controller
      */
     public function index()
     {
-        //
-    }
+        $brands = Brand::latest()->paginate(10);
 
+        return view ('brands.index', compact('brands'));
+    }
     /**
      * Show the form for creating a new resource.
      *
@@ -23,7 +25,7 @@ class BrandController extends Controller
      */
     public function create()
     {
-        //
+        return view ('brands.create');
     }
 
     /**
@@ -34,8 +36,19 @@ class BrandController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data=([
+            'name'=> $request->name,
+            'description'=>$request->description
+
+        ]);
+        Brand::create($data);
+
+        return redirect()
+              ->route('brands.index')
+              ->withMessage('Added Successfully!');
+    
     }
+    
 
     /**
      * Display the specified resource.
@@ -43,10 +56,12 @@ class BrandController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Brand $brand)
     {
-        //
+
+        return view ('brands.show', compact('brand'));
     }
+
 
     /**
      * Show the form for editing the specified resource.
@@ -54,21 +69,26 @@ class BrandController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Brand $brand)
     {
-        //
+
+        return view ('brands.edit', compact('brand'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
+    public function update(Request $request, Brand $brand)
     {
-        //
+
+        $data=([
+            'name'=> $request->name,
+            'description'=>$request->description
+
+        ]);
+        $brand->update($data);
+
+        return redirect()
+              ->route('brands.index')
+              ->withMessage('Updated Successfully!');
+    
     }
 
     /**
@@ -77,8 +97,40 @@ class BrandController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy (Brand $brand)
     {
-        //
+
+          $brand->delete();
+
+        return redirect()
+              ->route('brands.index')
+              ->withMessage('Deleted Successfully!');
+    }
+
+    public function trash()
+    {
+        $brands = Brand::onlyTrashed()->get();
+    
+        return view ('brands.trash', compact('brands'));
+    }
+
+    public function restore($id)
+    {
+        $brands = Brand::onlyTrashed()->find($id);
+        $brands->restore();
+
+        return redirect()
+        ->route('brands.trash')
+        ->withMessage('Successfully Restore!');
+
+    }
+
+    public function delete($id)
+    {
+        $brands = Brand::onlyTrashed()->find($id);
+        $brands->forceDelete();
+        return redirect()
+        ->route('brands.trash')
+        ->withMessage('Successfully Deleted!');
     }
 }

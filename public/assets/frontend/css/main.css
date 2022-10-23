@@ -1,0 +1,521 @@
+:root {
+    --baseColor: rgb(254, 215, 0);
+}
+
+
+/* Pree Header */
+
+.preHeader {
+    display: flex;
+    width: 100%;
+    height: 2.2rem;
+    align-items: center;
+
+}
+
+.preHeader .leftContent {
+    width: 50%;
+}
+
+.preHeader .leftContent ul {
+    display: flex;
+    align-items: center;
+
+}
+
+.preHeader .leftContent li {
+    list-style-type: none;
+
+}
+
+.preHeader .rightContent ul {
+    display: flex;
+    justify-content: end;
+}
+
+.preHeader .rightContent li {
+    list-style: none;
+
+
+}
+
+.preHeader .rightContent li a{
+    text-decoration: none;
+    color: var(--baseColor);
+}
+
+/* Pre Header End */
+
+
+/* Serch Button */
+/* Style the search field */
+form.example input[type=text], form.example input[type=email] {
+    padding: 10px;
+    font-size: 17px;
+    border: 3px solid rgb(254, 215, 0);
+    float: left;
+    width: 80%;
+    background: white;
+
+    border-radius: 40px 0px 0px 40px;
+}
+
+/* Style the submit button */
+form.example button {
+    float: left;
+    width: 14%;
+    padding: 10px;
+    background: rgb(254, 215, 0);
+    color: black;
+    font-size: 18px;
+    border: 2.5px solid rgb(254, 215, 0);
+    border-left: none;
+    /* Prevent double borders */
+    cursor: pointer;
+    border-radius: 0px 40px 40px 0px;
+    transition: 400ms;
+}
+
+form.example button:hover {
+    background: #d4eb06;
+}
+
+/* Clear floats */
+form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+header .logo {
+    height: 4rem;
+
+}
+
+header img {
+    height: 100%;
+}
+
+/* 
+//Navbar */
+
+.dropdown-menu {
+    width: 15rem;
+}
+
+/* Navbar End */
+
+.heading {
+    height: fit-content;
+    margin-bottom: 1rem;
+
+}
+
+/* ==============Sidebar========== */
+.sidebar {
+    margin-top: 0.2rem;
+
+    height: 24rem;
+    border-top: 3px inset #1C6EA4;
+    border-left: 3px inset #1C6EA4;
+
+}
+
+.sidebar .dropend li {
+    list-style: none;
+    padding: 0.2rem 0rem;
+    border-bottom: 1px solid #000000;
+
+}
+
+.dropend .dropdown-menu {
+    width: 45rem;
+    text-align: center;
+
+}
+
+.dropend .dropdown-menu li {
+    list-style: none;
+
+}
+
+#sideSpace a {
+    padding-left: 1rem;
+    padding-right: 2rem;
+    width: fit-content;
+    border-bottom: 3px solid #1C6EA4;
+    border-radius: 0px 0px 34px 0px;
+}
+
+#sidebarImage img {
+    height: 24rem;
+    width: 100%;
+
+}
+
+
+
+/* ==============Sidebar End========== */
+
+/* Slider */
+
+.carousel-inner {
+    height: 31rem;
+    width: 100%;
+}
+
+.carousel-item img {
+    min-height: 24rem;
+}
+
+/* ========footer======= */
+.list-unstyled li a {
+    text-decoration: none;
+}
+
+.list-unstyled li:hover {
+    color: rgb(254, 215, 0);
+}
+
+.list-unstyled li a:hover {
+    color: rgb(254, 215, 0);
+}
+
+.fab {
+    height: 32px;
+    width: 32px;
+}
+
+.instra {
+    height: 64px;
+    width: 64px;
+}
+
+/* ++++++++++++ */
+
+/* ++++++++Deals Of the Day Section+++++++++++ */
+.deals {
+    margin-top: 4rem;
+    height: 100%;
+}
+
+.deals .title p {
+    font-size: 1.2rem;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+
+    padding: 0.2rem 2rem 0.1rem 0rem;
+    border-bottom: 3px inset var(--baseColor);
+    border-radius: 0px 0px 15px 0px;
+}
+
+#countdown {
+    background-color: var(--baseColor);
+    padding: 0rem 1rem;
+    height: fit-content;
+    border: 1px solid #1C6EA4;
+    border-radius: 40px 40px 40px 40px;
+
+}
+
+#days {
+    display: none;
+}
+
+#countdown ul li {
+    list-style: none;
+    padding: 0rem 0.3rem;
+    font-weight: bold;
+    font-family: "Times New Roman", Times, serif;
+
+}
+
+.dealsProduct a {
+    text-decoration: none;
+}
+
+.dealsProduct .card {
+    width: 100%;
+    height: fit-content;
+    min-height: 22rem;
+    border-left: 1px solid var(--baseColor);
+    border-right: 1px solid var(--baseColor);
+    border-radius: 26px 26px 26px 26px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transition: 400ms;
+
+}
+
+.dealsProduct .card img {
+    min-height: 10rem;
+
+}
+
+.dealsProduct .card-header {
+    font-size: 0.9rem;
+    max-height: 5rem;
+    min-height: 5rem;
+}
+
+.dealsProduct del {
+    font-size: 12pt;
+    color: rgb(110, 109, 109);
+    font-family: "Times New Roman", Times, serif;
+}
+
+.dealsProduct .card-body .price h5 {
+    font-size: 1.7rem;
+    font-family: "Times New Roman", Times, serif;
+    color: tomato;
+}
+
+.dealsProduct .cart {
+    color: white;
+    background-color: cadetblue;
+    padding: 5pt 6pt;
+    border-radius: 50%;
+    transition: 400ms;
+
+}
+
+.dealsProduct .card:hover {
+
+    cursor: pointer;
+    box-shadow: rgba(220, 251, 46, 0.164) 0px 48px 100px 0px;
+}
+
+.dealsProduct .card:hover .cart {
+    cursor: pointer;
+    background-color: var(--baseColor);
+
+}
+
+/* ++++++++END Deals Of the Day Section+++++++++++ */
+
+/* ========= Shop Banner ========  */
+.shopBanner {
+    height: 7rem;
+
+
+}
+
+.shopBanner img {
+    width: 100%;
+    height: 100%;
+}
+
+/* ========= END Shop Banner ========  */
+
+
+/* ============ Popular Category================ */
+.popularCategory {
+    height: fit-content;
+
+}
+
+.popularCategory .sideAds {
+    height: 33rem;
+    background-image: url('../images/banners/banner2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-position: center; */
+
+}
+
+.popularCategory h4 {
+    display: flex;
+    font-size: 1.2rem;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+
+    padding: 0.2rem 2rem 0.1rem 0rem;
+    border-bottom: 3px inset var(--baseColor);
+    border-radius: 0px 0px 15px 0px;
+}
+
+.popularCategory .card img {
+    height: 8rem;
+}
+
+.popularCategory a {
+    text-decoration: none;
+
+}
+
+.popularCategory .cart {
+    color: white;
+    background-color: cadetblue;
+    padding: 5pt 6pt;
+    border-radius: 50%;
+    transition: 400ms;
+
+}
+
+.popularCategory .price {
+    font-family: "Times New Roman", Times, serif;
+}
+
+/* ============END Popular Category================ */
+
+/* __________Second BAnner Section________ */
+.banner2 .bannerLeft, .bannerRight {
+    height: 10rem;
+}
+
+.banner2 .bannerLeft img {
+    height: 100%;
+    width: 100%;
+}
+
+/* __________END Second BAnner Section________ */
+
+/* ----Headphones Section----- */
+.headphones {
+    height: fit-content;
+    margin-bottom: 7rem !important;
+}
+
+.headphones h4 {
+    display: flex;
+    font-size: 1.2rem;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    padding: 0.2rem 2rem 0.1rem 0rem;
+    border-bottom: 3px inset var(--baseColor);
+    border-radius: 0px 0px 15px 0px;
+}
+
+.headphones .ads {
+    height: 15rem;
+
+}
+
+.headphones .ads img {
+    height: 100%;
+}
+
+.headphones a {
+    text-decoration: none;
+}
+
+.headphones .card {
+    width: 100%;
+    height: 15rem;
+    min-height: 15rem;
+    max-height: 15rem;
+}
+
+.headphones .card img {
+    height: 7rem;
+}
+
+.headphones .cart {
+    color: white;
+    background-color: cadetblue;
+    padding: 4pt 5pt;
+    border-radius: 50%;
+    transition: 400ms;
+}
+
+/* ----END Headphones Section----- */
+
+/* Laptops */
+
+
+/* ==========Recomended=========== */
+.recommended h4 {
+
+    font-size: 1.2rem;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    padding: 0.2rem 2rem 0.1rem 0rem;
+    border-bottom: 3px inset var(--baseColor);
+    border-radius: 0px 0px 15px 0px;
+}
+
+.recommended a {
+    text-decoration: none;
+}
+
+.recommended .card {
+    width: 100%;
+    height: fit-content;
+    min-height: 24rem;
+    border-left: 1px solid var(--baseColor);
+    border-right: 1px solid var(--baseColor);
+    border-radius: 26px 26px 26px 26px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transition: 400ms;
+}
+
+.recommended .card img {
+    height: 15rem;
+}
+
+.recommended .cart {
+    color: white;
+    background-color: cadetblue;
+    padding: 5pt 9pt;
+    border-radius: 50%;
+    transition: 400ms;
+
+}
+
+.recommended .card:hover {
+
+    cursor: pointer;
+    box-shadow: rgba(220, 251, 46, 0.24) 0px 48px 100px 0px;
+}
+
+.recommended .card:hover .cart {
+    cursor: pointer;
+    background-color: var(--baseColor);
+
+}
+
+/* ==========END Recomended=========== */
+
+
+
+
+
+
+/* Copyright */
+.copyright {
+    background-color: var(--baseColor);
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+/* =========newsletter======== */
+.newsletter {
+    background-color: var(--baseColor);
+}
+
+.newsletter-title {
+    font-size: 1.25rem;
+    text-align: center;
+    padding: 9px;
+
+}
+
+.newsletter-titlle-two {
+    font-size: 300;
+    text-align: center;
+    padding: 9px;
+    margin-top: 5px;
+}
+
+#subscribe {
+    width: 19%;
+    font-weight: bold;
+    background-color: rgb(2, 2, 34);
+}
+
+#subscribe:hover {
+    background-color: blue;
+}
+
+/* ===========end============= */

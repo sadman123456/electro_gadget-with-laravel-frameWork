@@ -1,0 +1,109 @@
+a {
+    text-decoration: none;
+}
+
+.productCategory h3 {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    padding: 0.2rem 2rem 0.1rem 0rem;
+    border-bottom: 3px inset var(--baseColor);
+    border-radius: 0px 0px 15px 0px;
+}
+
+.productCategory .category {
+    height: 12rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    cursor: pointer;
+    border-radius: 26px 26px 26px 26px;
+
+}
+
+.productCategory .category img {
+    height: 9rem;
+}
+
+.productCategory .category h4 {
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+.productList .first {
+    height: fit-content;
+}
+
+.productList{
+    height: fit-content;
+} 
+
+.productList .first h3 {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    padding: 0.2rem 2rem 0.1rem 0rem;
+    border-bottom: 3px inset var(--baseColor);
+    border-radius: 0px 0px 15px 0px;
+}
+
+.productList .first ul li {
+    list-style: none;
+    padding: 0.2rem 0rem;
+
+
+}
+
+.productList .first .brand {
+    height: fit-content;
+    width: 100%;
+    background-color: aliceblue;
+    padding: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    font-family: Tahoma, Geneva, sans-serif;
+
+}
+
+.productList .first .price {
+    height: fit-content;
+    width: 100%;
+    background-color: aliceblue;
+    padding: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    font-family: Tahoma, Geneva, sans-serif;
+
+}
+
+.productList .second {
+    height: fit-content;
+}
+
+.productList .second .sort {
+    height: 3rem;
+}
+
+.productList .more {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    float: right;
+}
+
+.products .card {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    height: 28rem;
+    position: relative;
+}
+
+.products .card img {
+    height: 10rem;
+}
+
+.products .card-body {
+
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    min-height: 147pt;
+    max-height: 147pt;
+    overflow: hidden;
+}
+
+.products .badge {
+    position: absolute;
+}
+
+.products .card-footer {
+    display: flex;
+    justify-content: center;
+}

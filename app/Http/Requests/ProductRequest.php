@@ -28,22 +28,26 @@ class ProductRequest extends FormRequest
             case 'POST': {
         return [
             'name' => 'required|unique:products|max:255|min:4',
-            'brand' => 'required|max:50|min:4',
+            'category_id' => 'exists:categories,id',
+            'brand_id' => 'exists:brands,id',
             'sale_price'=> 'required|max:7|min:2|digits_between:0,9',
             'Purchase_price'=> 'required|max:7|min:2|digits_between:0,9',
-            'category'=> 'required',
+            'category_id' => 'exists:categories,id',
+
             'quantity'=> 'required|max:9|min:1|digits_between:0,9', 
             'description' => 'required|max:255|min:6',
             'image'=>'required|'. $imageValidation
+            
         ];
     }
          case 'PATCH': {
 
         return [
-            'name' => 'required|max:255|min:4|unique:products,name,'.$this->id,
-
-            'brand' => 'required|max:50|min:4',
+            // 'name' => 'required|max:255|min:4|unique:products,name,'.$this->id,
+            'name' => 'required|max:255|min:4|unique:categories,name'.$this->get('id'),
+            'brand_id' => 'exists:brands,id',
             'sale_price'=> 'required|max:7|min:2|digits_between:0,9',
+            'category_id' => 'exists:categories,id',
             'Purchase_price'=> 'required|max:7|min:2|digits_between:0,9',
             'category'=> 'required',
             'quantity'=> 'required|max:9|min:1|digits_between:0,9', 
